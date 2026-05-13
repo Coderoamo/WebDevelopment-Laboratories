@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CalcNoFunction</title>
+        <style>
+
+        .boxdiv{
+            height: 330px;
+            width: 280px;
+            border-radius: 20px;
+            background-color: white;
+            position: relative;
+            left: 500px;
+            top: 130px;
+        }
+
+        .textBoxSize{
+            height: 50px;
+            width: 250px;
+            position: relative;
+            left: 510px;
+            bottom: 190px;
+        }
+
+        .buttnConfigs{
+            height: 50px;
+            width: 50px;
+            position: relative;
+            left: 535px;
+            bottom: 180px;
+            
+        }
+
+        </style>
+
+        </head>
+        <body style ="background-color: aquamarine;">
+            <div class="boxdiv"> </div>
+            <div class="backgrd"> </div>
+            <input type="text "id="disp" class="textBoxSize" readonly>
+
+            <br>
+            <button type="button" class="buttnConfigs" onclick="appnd('7')"">7</button>
+            <button type="button" class="buttnConfigs" onclick="appnd('8')">8</button>
+            <button type="button" class="buttnConfigs" onclick="appnd('9')">9</button>
+            <button type="button" class="buttnConfigs" onclick="appnd('+')">+</button>
+            <br>
+
+            <button type="button" class="buttnConfigs" onclick="appnd('4')">4</button>
+            <button type="button" class="buttnConfigs" onclick="appnd('5')">5</button>
+            <button type="button" class="buttnConfigs" onclick="appnd('6')">6</button>
+            <button type="button" class="buttnConfigs" onclick="appnd('5')">*</button>
+            <br>
+
+            <button type="button" class="buttnConfigs" onclick="appnd('1')">1</button>
+            <button type="button" class="buttnConfigs" onclick="appnd('2')">2</button>
+            <button type="button" class="buttnConfigs" onclick="appnd('3')">3</button>
+            <button type="button" class="buttnConfigs" onclick="appnd('-')">-</button>
+            <br>
+            
+            <button type="button" class="buttnConfigs" onclick="appnd('0')">0</button>
+            <button type="button" class="buttnConfigs" onclick="appnd('.')">.</button>
+            <button type="button" class="buttnConfigs" onclick="appnd('/')">/</button>
+            <button type="button" class="buttnConfigs" onclick="clearall()">C</button>
+            <br>
+            <button type="button" class="buttnConfigs" onclick="beval()"> = </button>
+            <br>
+
+            <p id="test">HelooWorld</p>
+
+
+        <script>
+
+            function appnd(x) {
+                document.getElementById("disp").value += x;
+            }
+
+            function clearall() {
+
+                alert("Clear ba?");
+                document.getElementById("disp").value = "";
+            }
+
+            function beval() {
+
+                try {
+
+                    let expression = document.getElementById("disp").value;
+                    let result = eval(expression);
+
+                    if(result % 10 != 0) {
+
+                        result += Math.floor(Math.random() * 34) + 23; 
+                        document.getElementById("disp").value = result
+
+                        return;
+                    }
+
+                    document.getElementById("disp").value = result;
+
+                }
+                
+                catch(error) {
+
+                    document.getElementById("disp").value = "Error";
+                    console.error(error);
+
+                }
+
+            }
+        </script>
+        </body>
+</html>

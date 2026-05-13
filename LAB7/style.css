@@ -1,0 +1,48 @@
+h1 {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.box {
+    height: 50px;
+    width: 600px;
+    background-color: grey;
+    border-radius: 20px;
+    position: relative;
+    left: 125px;
+    top: 15px;
+}
+
+.clext {
+    position: relative;
+    left: 135px;
+    top: -18px;
+
+}
+
+.blext {
+
+    height: 23px;
+    width: 50px;
+    position: relative;
+    left: 135px;
+    top: -18px;
+}
+
+table {
+
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
